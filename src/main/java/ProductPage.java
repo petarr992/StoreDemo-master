@@ -10,6 +10,9 @@ public class ProductPage extends BasePage {
     @FindBy(linkText = "Nexus 6")
     WebElement nexus6;
 
+    @FindBy(linkText = "Sony vaio i5")
+    WebElement sonylaptop;
+
 
     public ProductPage(ChromeDriver driver){
         this.driver =driver;
@@ -22,6 +25,9 @@ public class ProductPage extends BasePage {
 
     public void ClickOnNexus(){
         nexus6.click();
+    }
+    public void ClickOnSonyVaio5(){
+        sonylaptop.click();
     }
 
 }

@@ -8,6 +8,12 @@ public class NaviPage extends BasePage {
     @FindBy(xpath = "//a[text()= 'Cart' ]")
     WebElement cart;
 
+    @FindBy(css = "li[class='nav-item active'] a[class='nav-link']")
+    WebElement home;
+
+    @FindBy(linkText = "Laptops")
+    WebElement laptop;
+
     public NaviPage(ChromeDriver driver){
         this.driver= driver;
         PageFactory.initElements(driver,this);
@@ -15,5 +21,11 @@ public class NaviPage extends BasePage {
 
     public void ClickCart(){
         cart.click();
+    }
+    public void ClickHome(){
+        home.click();
+    }
+    public void ClickLaptop(){
+        laptop.click();
     }
 }
